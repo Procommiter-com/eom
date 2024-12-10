@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 200;
+    src: url("../fonts/Monocraft-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 300;
+    src: url("../fonts/Monocraft-Light.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 400;
+    src: url("../fonts/Monocraft.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 600;
+    src: url("../fonts/Monocraft-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 700;
+    src: url("../fonts/Monocraft-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 900;
+    src: url("../fonts/Monocraft-Black.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    src: url("../fonts/Monocraft-ExtraLight-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    src: url("../fonts/Monocraft-Light-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    src: url("../fonts/Monocraft-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    src: url("../fonts/Monocraft-SemiBold-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    src: url("../fonts/Monocraft-Bold-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Monocraft", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    src: url("../fonts/Monocraft-Black-Italic.ttf");
+}
