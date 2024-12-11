@@ -8,17 +8,183 @@
     <link rel="stylesheet" href="/css/inventory.css">
     <style>
         #potionContainer {
-            min-width: 10rem;
-            width: 80%;
+            min-width: 40rem;
+            width: 60%;
+            max-width: 50rem;
+
+            height: 25rem;
+        }
+
+        #blaze {
+            left: calc(50% - 18rem);
+            transform: translateY(-90%);
+        }
+
+        #potions {
+            display: flex;
+            bottom: 5rem;
+            width: 20rem;
+
+            justify-content: space-around;
+        }
+
+        #potions > *:nth-child(2) {
+            transform: translateY(50%);
+        }
+
+        #blazeLoader {
+            position: absolute;
+
+            height: 1.5rem;
+            bottom: 10rem;
+            left: calc(50% - 8rem);
+        }
+
+        #brewPipe {
+            position: absolute;
+
+            height: 5rem;
+            bottom: 10.3rem;
+            left: calc(50% - 14rem);
+        }
+
+        #brewBubble {
+            position: absolute;
+
+            width: 2rem;
+            left: calc(50% - 6.8rem);
+            bottom: 12.3rem;
+        }
+
+        #brewArrow {
+            position: absolute;
+
+            top: 6.2rem;
+            right: calc(50% - 5rem);
+            width: 1.5rem;
+        }
+
+        #LpotionPipe > span:nth-child(1) {
+            position: absolute;
+            display: block;
+
+            top: 9.98385rem;
+            left: calc(50% - 1.5rem);
+            width: .5rem;
+            height: 7rem;
+
+            background: #8A8A8A;
+            box-shadow: .07rem 0 0 0 #373737 inset, -.07rem 0 0 0 #FEFEFE inset;
+            filter: drop-shadow(0 .07rem 0 #FFF);
+        }
+
+        #LpotionPipe > span:nth-child(2) {
+            position: absolute;
+            display: block;
+
+            top: 16.5rem;
+            left: calc(50% - 1.5rem - 3.421rem);
+            width: 3.5rem;
+            height: .48rem;
+
+            background-color: #8A8A8A;
+            box-shadow: 0 .07rem 0 0 #373737 inset;
+            filter: drop-shadow(0 .07rem 0 #FFF);
+        }
+
+        #MpotionPipe > span {
+            position: absolute;
+            display: block;
+
+            top: 9.98385rem;
+            left: calc(50% - .25rem);
+            width: .5rem;
+            height: 8.21rem;
+
+            background: #8A8A8A;
+            box-shadow: .07rem 0 0 0 #373737 inset, -.07rem 0 0 0 #FEFEFE inset;
+        }
+
+        #RpotionPipe > span:nth-child(1) {
+            position: absolute;
+            display: block;
+
+            top: 9.98385rem;
+            right: calc(50% - 1.5rem);
+            width: .5rem;
+            height: 7rem;
+
+            background: #8A8A8A;
+            box-shadow: .07rem 0 0 0 #373737 inset, -.07rem 0 0 0 #FEFEFE inset;
+            filter: drop-shadow(0 .07rem 0 #FFF);
+        }
+
+        #RpotionPipe > span:nth-child(2) {
+            position: absolute;
+            display: block;
+
+            top: 16.5rem;
+            right: calc(50% - 1.5rem - 3.421rem);
+            width: 3.5rem;
+            height: .48rem;
+
+            background-color: #8A8A8A;
+            box-shadow: 0 .07rem 0 0 #373737 inset;
+            filter: drop-shadow(0 .07rem 0 #FFF);
+        }
+
+        h1 {
+            font-weight: 400;
+            color: #464646;
+
+            text-align: center;
+        }
+
+        img {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            pointer-events: none;
+
+            image-rendering: pixelated;
         }
     </style>
 </head>
 <body>
-    <div id="potionContainer" class="invContainer">
-        <div class="itemContainer">
+    <div id="potionContainer" class="invContainer centerHorizontal">
+        <h1>Brewing Stand</h1>
+        <div class="itemContainer centerHorizontal">
             <img class="item" src="/imgs/item/emerald.png">
         </div>
+        <div id="blaze" class="itemContainer">
+            <img class="item" src="/imgs/item/blaze_powder.png">
+        </div>
+        <img id="brewBubble" src="img/bubble.png">
+        <img id="brewArrow" src="img/arrow.png">
+        <img id="brewPipe" src="img/brew_pipe.png">
+        <img id="blazeLoader" src="img/blaze_container.png">
+        <div id="potions" class="centerHorizontal">
+            <div class="itemContainer">
+                <img class="item" src="/imgs/item/potion.png">
+            </div>
+            <div class="itemContainer">
+                <img class="item" src="/imgs/item/potion.png">
+            </div>
+            <div class="itemContainer">
+                <img class="item" src="/imgs/item/potion.png">
+            </div>
+        </div>
+        <div id="LpotionPipe">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="MpotionPipe">
+            <span></span>
+        </div>
+        <div id="RpotionPipe">
+            <span></span>
+            <span></span>
+        </div>
     </div>
-    <h1>Hello, World!</h1>
 </body>
 </html>
