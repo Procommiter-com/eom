@@ -133,6 +133,21 @@
             filter: drop-shadow(0 .07rem 0 #FFF);
         }
 
+        #inv {
+            display: flex;
+            flex-flow: column;
+            width: fit-content;
+        }
+
+        #inv > div {
+            display: flex;
+            width: fit-content;
+        }
+
+        #overlay {
+            width: fit-content;
+        }
+
         h1 {
             font-weight: 400;
             color: #464646;
@@ -147,6 +162,10 @@
             pointer-events: none;
 
             image-rendering: pixelated;
+        }
+
+        body {
+            
         }
     </style>
 </head>
@@ -186,5 +205,125 @@
             <span></span>
         </div>
     </div>
+    <div id="inv" class="invContainer centerHorizontal">
+        <div>
+            <div class="itemContainer" data-value="water_bottle">
+                <img class="item" src="img/water_bottle.png">
+            </div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+        </div>
+        <div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+        </div>
+        <div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+        </div>
+        <div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+        </div>
+    </div>
+    <div id="overlay" class="invContainer">
+        <h3>Water Bottle</h3>
+        <div>
+            <p>No Effect</p>
+        </div>
+    </div>
+    <script type="module">
+        fetch("./data/overlay.json").then(e => {
+            // e.json().then(init); 
+        });
+
+        let overlay = document.getElementById("overlay");
+
+        function init(json) {
+            overlay.hidden = true;
+            
+            document.addEventListener('mouseover', (e) => {
+                let ov = json[e.target.getAttribute("data-value")];
+                if(ov) {
+                    overlay.children[0].innerHTML = ov["name"];
+                    overlay.hidden = false;
+                }else overlay.hidden = true;
+            });
+        }
+
+        let currentItem = null;
+
+    </script>
 </body>
 </html>
