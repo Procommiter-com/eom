@@ -1,0 +1,26 @@
+{
+    "bottle": {
+        "name": "Glass Bottle"
+    },
+    "water_bottle": {
+        "name": "Water Bottle",
+        "effects": [
+            "No Effects"
+        ]
+    },
+    "awkward_potion": {
+        "name": "Awkward Potion",
+        "effects": [
+            "No Effects"
+        ]
+    },
+    "sugar": {
+        "name": "Sugar"
+    },
+    "swiftness": {
+        "name": "Potion of Swiftness",
+        "effects": [
+            "Speed (3:00)"
+        ]
+    }
+}
