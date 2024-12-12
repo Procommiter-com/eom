@@ -1,132 +1,438 @@
 {
-    "Blast_Furnace": [
+    "Barrel": [
         [
-            ["Coal", "15", "Emerald", "1", "25"],
-            ["Emerald", "5", "Iron_Helmet", "12"],
-            ["Emerald", "5", "Iron_Chestplate", "12"],
-            ["Emerald", "4", "Iron_Leggings", "12"],
-            ["Emerald", "4", "Iron_Boots", "12"],
-            ["Iron_Ingot", "4", "Emerald", "12", "43.33"],
-            ["Emerald", "36", "Bell", "12"],
-            ["Emerald", "3", "Chainmail_Leggings", "12"],
-            ["Emerald", "1", "Chainmail_Boots", "12"],
-            ["Lava_Bucket", "1", "Emerald", "12", "60"],
-            ["Diamond", "1", "Emerald", "12", "73.33"],
-            ["Emerald", "1", "Chainmail_Helmet", "12"],
-            ["Emerald", "4", "Chainmail_Chestplate", "12"],
-            ["Emerald", "5", "Shield", "12"],
-            ["Emerald", "19-33", "Enchanted_Diamond_Leggings", "3"],
-            ["Emerald", "13-27", "Enchanted_Diamond_Boots", "3"],
-            ["Emerald", "13-27", "Enchanted_Diamond_Helmet", "3"],
-            ["Emerald", "21-35", "Enchanted_Diamond_Chestplate", "3"]
-        ]
-    ],
-    
-    "Smoker": [
-        ["Coal", "15", "Emerald", "1", "25"],
-        ["Emerald", "5", "Raw_Chicken", "16"],
-        ["Emerald", "5", "Raw_Rabbit", "16"],
-        ["Emerald", "7", "Raw_Porkchop", "16"],
-        ["Emerald", "1", "Rabbit_Stew", "12"],
-        ["Coal", "15", "Emerald", "16"],
-        ["Emerald", "8", "Cooked_Chicken", "16"],
-        ["Emerald", "5", "Cooked_Porkchop", "16"],
-        ["Emerald", "10", "Raw_Beef", "16"],
-        ["Emerald", "7", "Raw_Mutton", "16"],
-        ["Emerald", "10", "Dried_Kelp_Block", "12"],
-        ["Emerald", "10", "Sweet_Berries", "12"]
-    ],
-
-    "Cartography_table" : [
-        ["Paper", "24", "Emerald", "16"],
-        ["Emerald", "7", "Empty_Map", "12"],
-        ["Glass_Pane", "11", "Emerald", "16"],
-        ["Emerald", "13", "Ocean_Explorer_Map", "12"],
-        ["Compass", "1", "Emerald", "12"],
-        ["Emerald", "14", "Woodland_Explorer_Map", "12"],
-        ["Emerald", "12", "Trial_Explorer_Map", "12"],
-        ["Emerald", "3", "Item_Frame", "12"],
-        ["Emerald", "8", "Any_color_Banner", "12"],
-        ["Emerald", "8", "Globe_Banner_Pattern", "12"]
-    ],
-
-    "Brewing_stand" : [
-        ["Rotten_Flesh", "32", "Emerald", "1"],
-        ["Emerald", "2", "Redstone_Dust", "12"],
-        ["Gold_Ingot", "3", "Emerald", "12"],
-        ["Emerald", "1", "Lapis_Lazuli", "12"],
-        ["Rabbit's_Foot", "2", "Emerald", "12"],
-        ["Emerald", "4", "Glowstone", "12"],
-        ["Turtle_Scute", "4", "Emerald", "12"],
-        ["Glass_Bottle", "9", "Emerald", "12"],
-        ["Emerald", "5", "Ender_Pearl", "12"],
-        ["Nether_Wart", "22", "Emerald", "12"],
-        ["Emerald", "3", "Bottle_o'_Enchanting", "12"]
-    ],
-
-    "Composter" : [
-        ["Coal", "15", "Emerald", "1", "25"],
-        ["Emerald", "5", "Wheat", "16"],
-        ["Emerald", "5", "Potato", "16"],
-        ["Emerald", "5", "Carrot", "16"],
-        ["Emerald", "5", "Beetroot", "16"],
-        ["Emerald", "1", "Bread", "16"],
-        ["Emerald", "6", "Pumpkin", "12"],
-        ["Emerald", "1", "Pumpkin_Pie", "12"],
-        ["Emerald", "1", "Apple", "16"],
-        ["Emerald", "2", "Melon", "12"],
-        ["Emerald", "3", "Cookie", "12"],
-        ["Emerald", "1", "Suspicious_Stew", "12"],
-        ["Emerald", "1", "Suspicious_Stew", "12"],
-        ["Emerald", "1", "Suspicious_Stew", "12"],
-        ["Emerald", "1", "Suspicious_Stew", "12"],
-        ["Emerald", "1", "Suspicious_Stew", "12"],
-        ["Emerald", "1", "Suspicious_Stew", "12"],
-        ["Emerald", "1", "Cake", "12"],
-        ["Emerald", "3", "Golden_Carrot", "12"],
-        ["Emerald", "4", "Glistering_Melon_Slice", "12"]
-    ],
-
-    "Barrel" : [
-        [ 
-            ["string", "20","","", "emerald", "1"],
-            ["coal", "10","","", "emerald", "1"],
-            ["emerald", "3","","", "bucket_of_cod",""],
-            ["raw_Cod", "6","emerald","1", "cooked_cod","1"]
+            ["string", "20", "", "", "emerald", "2"],
+            ["coal", "10", "", "", "emerald", "2"],
+            ["emerald", "3", "", "", "cod_bucket", "1"],
+            ["cod", "6", "emerald", "1", "cooked_cod", "1"]
         ],
         [
-            ["raw_Cod", "15","","", "emerald","1"]
+            ["cod", "15", "", "", "emerald", "10"],
+            ["emerald", "2", "", "", "campfire", "5"],
+            ["raw_salmon", "6", "emerald", "1", "cooked_salmon", "5"]
+        ],
+        [
+            ["raw_salmon", "13", "", "", "emerald", "20"],
+            ["emerald", "8-22", "", "", "enchanted_fishing_rod", "10"]
+        ],
+        [
+            ["tropical_fish", "6", "", "", "emerald", "30"]
+        ],
+        [
+            ["pufferfish", "4", "", "", "emerald", "30"],
+            ["oak_boat", "1", "", "", "emerald", "30"]
         ]
     ],
 
-    "Fletching_Table" : [
-        ["Stick", "32", "Emerald", "1", "Low", "2"],
-        ["Emerald", "16", "Arrow", "12", "Low", "1"],
-        ["Gravel", "10", "Emerald", "10", "Flint", "12", "Low", "1"],
-        ["Flint", "26", "Emerald", "12", "Low", "10"],
-        ["Emerald", "2", "Bow", "12", "Low", "5"],
-        ["String", "14", "Emerald", "16", "Low", "20"],
-        ["Emerald", "3", "Crossbow", "12", "Low", "10"],
-        ["Feather", "24", "Emerald", "16", "Low", "30"],
-        ["Emerald", "7-21", "Enchanted_Bow", "3", "Low", "15"],
-        ["Tripwire_Hook", "8", "Emerald", "12", "Low", "30"],
-        ["Emerald", "8-22", "Enchanted_Crossbow", "3", "Low", "15"],
-        ["Emerald", "2", "Arrow", "5", "Tipped_Arrow", "5", "12", "Low", "30"]
+    "Blast_Furnace": [
+        [
+            ["coal", "15", "", "", "emerald", "2"],
+            ["emerald", "5", "", "", "iron_helmet", "1"],
+            ["emerald", "9", "", "", "iron_chestplate", "1"],
+            ["emerald", "7", "", "", "iron_leggings", "1"],
+            ["emerald", "4", "", "", "iron_boots", "1"]
+        ],
+        [
+            ["iron_ingot", "4", "", "", "emerald", "10"],
+            ["emerald", "36", "", "", "bell", "5"],
+            ["emerald", "3", "", "", "chainmail_leggings", "5"],
+            ["emerald", "1", "", "", "chainmail_boots", "5"]
+        ],
+        [
+            ["lava_bucket", "1", "", "", "emerald", "20"],
+            ["diamond", "1", "", "", "emerald", "20"],
+            ["emerald", "1", "", "", "chainmail_helmet", "10"],
+            ["emerald", "4", "", "", "chainmail_chestplate", "10"],
+            ["emerald", "5", "", "", "shield", "10"]
+        ],
+        [
+            ["emerald", "19-33", "", "", "enchanted_diamond_leggings", "15"],
+            ["emerald", "13-27", "", "", "enchanted_diamond_boots", "15"]
+        ],
+        [
+            ["emerald", "13-27", "", "", "enchanted_diamond_helmet", "30"],
+            ["emerald", "21-35", "", "", "enchanted_diamond_chestplate", "30"]
+        ]
     ],
 
-    "Cauldron" : [
-        ["Leather", "6", "Emerald", "1", "Low", "2"],
-        ["Emerald", "3", "Leather_Pants", "12", "High", "1"],
-        ["Emerald", "7", "Leather_Tunic", "12", "High", "1"],
-        ["Flint", "26", "Emerald", "12", "Low", "10"],
-        ["Emerald", "5", "Leather_Cap", "12", "High", "5"],
-        ["Emerald", "4", "Leather_Boots", "12", "High", "5"],
-        ["Rabbit_Hide", "9", "Emerald", "12", "Low", "20"],
-        ["Emerald", "7", "Leather_Tunic", "12", "High", "10"],
-        ["Turtle_Scute", "4", "Emerald", "12", "Low", "30"],
-        ["Emerald", "6", "Leather_Horse_Armor", "12", "High", "15"],
-        ["Emerald", "5", "Leather_Cap", "12", "High", "30"],
-        ["Emerald", "6", "Saddle", "12", "High", "30"]
-    ]
+    "Smoker": [
+        [
+            ["raw_chicken", "14", "", "", "emerald", "2"],
+            ["raw_rabbit", "4", "", "", "emerald", "2"],
+            ["raw_porkchop", "7", "", "", "emerald", "2"],
+            ["emerald", "1", "", "", "rabbit_stew", "1"]
+        ],
+        [
+            ["coal", "15", "", "", "emerald", "2"],
+            ["emerald", "1", "", "", "cooked_chicken", "5"],
+            ["emerald", "1", "", "", "cooked_porkchop", "5"]
+        ],
+        [
+            ["raw_beef", "10", "", "", "emerald", "20"],
+            ["raw_mutton", "7", "", "", "emerald", "20"]
+        ],
+        [
+            ["dried_kelp_block", "10", "", "", "emerald", "30"]
+        ],
+        [
+            ["sweet_berries", "10", "", "", "emerald", "30"]
+        ]
+    ],
 
-  }
+    "Brewing_Stand": [
+        [
+            ["rotten_flesh", "32", "", "", "emerald", "2"],
+            ["emerald", "1", "", "", "redstone_dust", "1"]
+        ],
+        [
+            ["gold_ingot", "3", "", "", "emerald", "10"],
+            ["emerald", "1", "", "", "lapis_lazuli", "5"]
+        ],
+        [
+            ["rabbit's_foot", "2", "", "", "emerald", "20"],
+            ["emerald", "4", "", "", "glowstone", "10"]
+        ],
+        [
+            ["turtle_scute", "4", "", "", "emerald", "30"],
+            ["glass_bottle", "9", "", "", "emerald", "30"],
+            ["emerald", "5", "", "", "ender_pearl", "15"]
+        ],
+        [
+            ["nether_wart", "22", "", "", "emerald", "30"],
+            ["emerald", "3", "", "", "bottle_o'_enchanting", "30"]
+        ]
+    ],
+
+    "Fletching_Table": [
+        [
+            ["stick", "32", "", "", "emerald", "2"],
+            ["emerald", "1", "", "", "arrow", "1"],
+            ["gravel", "10", "emerald", "1", "flint", "1"]
+        ],
+        [
+            ["flint", "26", "", "", "emerald", "10"],
+            ["emerald", "2", "", "", "bow", "5"]
+        ],
+        [
+            ["string", "14", "", "", "emerald", "20"],
+            ["emerald", "3", "", "", "crossbow", "10"]
+        ],
+        [
+            ["feather", "24", "", "", "emerald", "30"],
+            ["emerald", "7-21", "", "", "enchanted_bow", "15"]
+        ],
+        [
+            ["tripwire_hook", "8", "", "", "emerald", "30"],
+            ["emerald", "8-22", "", "", "enchanted_crossbow", "15"],
+            ["emerald", "2", "arrow", "5", "tipped_arrow", "30"]
+        ]
+    ],
+
+    "Cauldron": [
+        [
+            ["leather", "6", "", "", "emerald", "2"],
+            ["emerald", "3", "", "", "leather_pants", "1"],
+            ["emerald", "7", "", "", "leather_tunic", "1"]
+        ],
+        [
+            ["flint", "26", "", "", "emerald", "10"],
+            ["emerald", "5", "", "", "leather_cap", "5"],
+            ["emerald", "4", "", "", "leather_boots", "5"]
+        ],
+        [
+            ["rabbit_hide", "9", "", "", "emerald", "20"],
+            ["emerald", "7", "", "", "leather_tunic", "10"]
+        ],
+        [
+            ["turtle_scute", "4", "", "", "emerald", "30"],
+            ["emerald", "6", "", "", "leather_horse_armor", "15"]
+        ],
+        [
+            ["emerald", "5", "", "", "leather_cap", "30"],
+            ["emerald", "6", "", "", "saddle", "30"]
+        ]
+    ],
+
+    "Lectern": [
+        [
+            ["paper", "24", "", "", "emerald", "2"],
+            ["emerald", "9", "", "", "bookshelf", "1"],
+            ["emerald", "5-64", "book", "", "enchanted_book", "1"]
+        ],
+        [
+            ["book", "4", "", "", "emerald", "10"],
+            ["emerald", "1", "", "", "lantern", "5"],
+            ["emerald", "5-64", "book", "", "enchanted_book", "5"]
+        ],
+        [
+            ["ink_sac", "5", "", "", "emerald", "20"],
+            ["emerald", "1", "", "", "glass", "10"],
+            ["emerald", "5-64", "book", "", "enchanted_book", "10"]
+        ],
+        [
+            ["book_and_quill", "1", "", "", "emerald", "30"],
+            ["emerald", "4", "", "", "compass", "15"],
+            ["emerald", "5", "", "", "clock", "15"],
+            ["emerald", "5-64", "book", "", "enchanted_book", "15"]
+        ],
+        [
+            ["emerald", "20", "", "", "name_tag", "30"]
+        ]
+    ],
+
+    "Stonecutter": [
+        [
+            ["clay_ball", "10", "", "", "emerald", "2"],
+            ["emerald", "1", "", "", "brick", "1"]
+        ],
+        [
+            ["stone", "20", "", "", "emerald", "10"],
+            ["emerald", "1", "", "", "chiseled_stone_bricks", "5"]
+        ],
+        [
+            ["granite", "16", "", "", "emerald", "20"],
+            ["andesite", "16", "", "", "emerald", "20"],
+            ["diorite", "16", "", "", "emerald", "20"],
+            ["emerald", "1", "", "", "dripstone_block", "10"],
+            ["emerald", "1", "", "", "polished_andesite", "10"],
+            ["emerald", "1", "", "", "polished_diorite", "10"],
+            ["emerald", "1", "", "", "polished_granite", "10"]
+        ],
+        [
+            ["nether_quartz", "12", "", "", "emerald", "30"],
+            ["emerald", "1", "", "", "any_color_stained_terracotta", "15"],
+            ["emerald", "1", "", "", "any_color_glazed_terracotta", "15"]
+        ],
+        [
+            ["emerald", "1", "", "", "quartz_pillar", "30"],
+            ["emerald", "1", "", "", "block_of_quartz", "30"]
+        ]
+    ],
+
+    "Loom": [
+        [
+            ["white_wool", "18", "", "", "emerald", "2"],
+            ["brown_wool", "18", "", "", "emerald", "2"],
+            ["black_wool", "18", "", "", "emerald", "2"],
+            ["gray_wool", "18", "", "", "emerald", "2"],
+            ["emerald", "2", "", "", "shears", "1"]
+        ],
+        [
+            ["white_dye", "12", "", "", "emerald", "10"],
+            ["gray_dye", "12", "", "", "emerald", "10"],
+            ["black_dye", "12", "", "", "emerald", "10"],
+            ["light_blue_dye", "12", "", "", "emerald", "10"],
+            ["lime_dye", "12", "", "", "emerald", "10"],
+            ["emerald", "1", "", "", "any_color_wool", "5"],
+            ["emerald", "1", "", "", "any_color_carpet", "5"]
+        ],
+        [
+            ["yellow_dye", "12", "", "", "emerald", "20"],
+            ["light_gray_dye", "12", "", "", "emerald", "20"],
+            ["orange_dye", "12", "", "", "emerald", "20"],
+            ["red_dye", "12", "", "", "emerald", "20"],
+            ["pink_dye", "12", "", "", "emerald", "20"],
+            ["emerald", "3", "", "", "any_color_bed", "10"]
+        ],
+        [
+            ["brown_dye", "12", "", "", "emerald", "30"],
+            ["purple_dye", "12", "", "", "emerald", "30"],
+            ["blue_dye", "12", "", "", "emerald", "30"],
+            ["green_dye", "12", "", "", "emerald", "30"],
+            ["magenta_dye", "12", "", "", "emerald", "30"],
+            ["cyan_dye", "12", "", "", "emerald", "30"],
+            ["emerald", "3", "", "", "any_color_banner", "15"]
+        ],
+        [
+            ["emerald", "2", "", "", "painting", "30"]
+        ]
+    ],
+
+    "Smithing_Table": [
+        [
+            ["coal", "15", "", "", "emerald", "2"],
+            ["emerald", "1", "", "", "stone_axe", "1"],
+            ["emerald", "1", "", "", "stone_shovel", "1"],
+            ["emerald", "1", "", "", "stone_pickaxe", "1"],
+            ["emerald", "1", "", "", "stone_hoe", "1"]
+        ],
+        [
+            ["iron_ingot", "4", "", "", "emerald", "10"],
+            ["emerald", "36", "", "", "bell", "5"]
+        ],
+        [
+            ["flint", "30", "", "", "emerald", "20"],
+            ["emerald", "6-20", "", "", "enchanted_iron_axe", "10"],
+            ["emerald", "7-21", "", "", "enchanted_iron_shovel", "10"],
+            ["emerald", "8-22", "", "", "enchanted_iron_pickaxe", "10"],
+            ["emerald", "4", "", "", "diamond_hoe", "10"]
+        ],
+        [
+            ["diamond", "1", "", "", "emerald", "30"],
+            ["emerald", "17-31", "", "", "enchanted_diamond_axe", "15"],
+            ["emerald", "10-24", "", "", "enchanted_diamond_shovel", "15"]
+        ],
+        [
+            ["emerald", "18-32", "", "", "enchanted_diamond_pickaxe", "30"]
+        ]
+    ],
+
+    "Grindstone": [
+        [
+            ["coal", "15", "", "", "emerald", "2"],
+            ["emerald", "3", "", "", "iron_axe", "1"],
+            ["emerald", "7-21", "", "", "enchanted_iron_sword", "1"]
+        ],
+        [
+            ["iron_ingot", "4", "", "", "emerald", "10"],
+            ["emerald", "36", "", "", "bell", "5"]
+        ],
+        [
+            ["flint", "24", "", "", "emerald", "20"]
+        ],
+        [
+            ["diamond", "1", "", "", "emerald", "30"],
+            ["emerald", "17-31", "", "", "enchanted_diamond_axe", "15"]
+        ],
+        [
+            ["emerald", "13-27", "", "", "enchanted_diamond_sword", "30"]
+        ]
+    ],
+
+    "Cartography_Table": [
+        [
+            ["paper", "24", "", "", "emerald", "2"],
+            ["emerald", "7", "", "", "empty_map", "1"]
+        ],
+        [
+            ["glass_pane", "11", "", "", "emerald", "10"],
+            ["emerald", "13", "compass", "", "ocean_explorer_map", "5"]
+        ],
+        [
+            ["compass", "1", "", "", "emerald", "20"],
+            ["emerald", "14", "compass", "", "woodland_explorer_map", "10"],
+            ["emerald", "12", "compass", "", "trial_explorer_map", "10"]
+        ],
+        [
+            ["emerald", "7", "", "", "item_frame", "15"],
+            ["emerald", "3", "", "", "banner_any_color", "15"]
+        ],
+        [
+            ["emerald", "8", "", "", "globe_banner_pattern", "30"]
+        ]
+    ],
+
+    "Composter": [
+        [
+            ["wheat", "20", "", "", "emerald", "2"],
+            ["potato", "26", "", "", "emerald", "2"],
+            ["carrot", "22", "", "", "emerald", "2"],
+            ["beetroot", "15", "", "", "emerald", "2"],
+            ["emerald", "1", "", "", "bread_6", "1"]
+        ],
+        [
+            ["pumpkin", "6", "", "", "emerald", "10"],
+            ["emerald", "1", "", "", "pumpkin_pie_4", "5"],
+            ["emerald", "1", "", "", "apple_4", "5"]
+        ],
+        [
+            ["melon", "4", "", "", "emerald", "20"],
+            ["emerald", "3", "", "", "cookie_18", "10"]
+        ],
+        [
+            ["emerald", "1", "", "", "suspicious_stew_t1", "15"],
+            ["emerald", "1", "", "", "suspicious_stew_t2", "15"],
+            ["emerald", "1", "", "", "suspicious_stew_t3", "15"],
+            ["emerald", "1", "", "", "suspicious_stew_t4", "15"],
+            ["emerald", "1", "", "", "suspicious_stew_t5", "15"],
+            ["emerald", "1", "", "", "suspicious_stew_t6", "15"],
+            ["emerald", "1", "", "", "cake", "15"]
+        ],
+        [
+            ["emerald", "3", "", "", "golden_carrot_3", "30"],
+            ["emerald", "4", "", "", "glistering_melon_slice_3", "30"]
+        ]
+    ],
+
+    "Wandering trader": [
+        [
+            ["emerald", "1", "", "", "allium", "1"],
+            ["emerald", "1", "", "", "azure_bluet", "1"],
+            ["emerald", "1", "", "", "blue_orchid", "1"],
+            ["emerald", "1", "", "", "cornflower", "1"],
+            ["emerald", "1", "", "", "dandelion", "1"],
+            ["emerald", "1", "", "", "lily_of_the_valley", "1"],
+            ["emerald", "1", "", "", "orange_tulip", "1"],
+            ["emerald", "1", "", "", "oxeye_daisy", "1"],
+            ["emerald", "1", "", "", "pink_tulip", "1"],
+            ["emerald", "1", "", "", "poppy", "1"],
+            ["emerald", "1", "", "", "red_tulip", "1"],
+            ["emerald", "1", "", "", "white_tulip", "1"],
+            ["emerald", "1", "", "", "open_eyeblossom", "1"],
+            ["emerald", "1", "", "", "fern", "1"],
+            ["emerald", "1", "", "", "brown_mushroom", "1"],
+            ["emerald", "1", "", "", "red_mushroom", "1"],
+            ["emerald", "1", "", "", "beetroot_seeds", "1"],
+            ["emerald", "1", "", "", "melon_seeds", "1"],
+            ["emerald", "1", "", "", "pumpkin_seeds", "1"],
+            ["emerald", "1", "", "", "wheat_seeds", "1"],
+            ["emerald", "1", "", "", "pumpkin", "1"],
+            ["emerald", "1", "", "", "sugar_cane", "1"],
+            ["emerald", "1", "", "", "vines", "1"],
+            ["emerald", "1", "", "", "pale_hanging_moss", "1"],
+            ["emerald", "1", "", "", "lily_pad", "1"],
+            ["emerald", "1", "", "", "moss_block", "1"],
+            ["emerald", "1", "", "", "pale_moss_block", "1"],
+            ["emerald", "1", "", "", "pointed_dripstone", "1"],
+            ["emerald", "1", "", "", "rooted_dirt", "1"],
+            ["emerald", "1", "", "", "small_dripleaf", "1"],
+            ["emerald", "2", "", "", "glowstone", "1"],
+            ["emerald", "2", "", "", "sea_pickle", "1"],
+            ["emerald", "3", "", "", "cactus", "1"],
+            ["emerald", "3", "", "", "brain_coral_block", "1"],
+            ["emerald", "3", "", "", "bubble_coral_block", "1"],
+            ["emerald", "3", "", "", "fire_coral_block", "1"],
+            ["emerald", "3", "", "", "horn_coral_block", "1"],
+            ["emerald", "3", "", "", "tube_coral_block", "1"],
+            ["emerald", "3", "", "", "kelp", "1"],
+            ["emerald", "4", "", "", "slimeball", "1"],
+            ["emerald", "5", "", "", "acacia_sapling", "1"],
+            ["emerald", "5", "", "", "birch_sapling", "1"],
+            ["emerald", "5", "", "", "dark_oak_sapling", "1"],
+            ["emerald", "5", "", "", "jungle_sapling", "1"],
+            ["emerald", "5", "", "", "oak_sapling", "1"],
+            ["emerald", "5", "", "", "spruce_sapling", "1"],
+            ["emerald", "5", "", "", "mangrove_propagule", "1"],
+            ["emerald", "5", "", "", "cherry_sapling", "1"],
+            ["emerald", "5", "", "", "pale_oak_sapling", "1"],
+            ["emerald", "5", "", "", "nautilus_shell", "1"]
+        ],
+        [
+            ["emerald", "1", "", "", "gunpowder", "1"],
+            ["emerald", "3", "", "", "podzol", "1"],
+            ["emerald", "3", "", "", "packed_ice", "1"],
+            ["emerald", "5", "", "", "bucket_of_pufferfish", "1"],
+            ["emerald", "5", "", "", "bucket_of_tropical_fish", "1"],
+            ["emerald", "6", "", "", "blue_ice", "1"]
+            ]
+    ],
+
+    "Piglin" : [
+        [["gold_ingot", "1", "", "", "enchanted_book", "1"],
+        ["gold_ingot", "1", "", "", "iron_boots", "8"],
+        ["gold_ingot", "1", "", "", "splash_potion_of_fire_resistance", "10"],
+        ["gold_ingot", "1", "", "", "potion_of_fire_resistance", "10"],
+        ["gold_ingot", "1", "", "", "water_bottle", "10"],
+        ["gold_ingot", "1", "", "", "iron_nugget", "10–36"],
+        ["gold_ingot", "1", "", "", "ender_pearl", "2–4"],
+        ["gold_ingot", "1", "", "", "string", "3–9"],
+        ["gold_ingot", "1", "", "", "nether_quartz", "5–12"],
+        ["gold_ingot", "1", "", "", "obsidian", "1"],
+        ["gold_ingot", "1", "", "", "crying_obsidian", "1–3"],
+        ["gold_ingot", "1", "", "", "fire_charge", "1"],
+        ["gold_ingot", "1", "", "", "leather", "2–4"],
+        ["gold_ingot", "1", "", "", "soul_sand", "2–8"],
+        ["gold_ingot", "1", "", "", "nether_brick", "6–12"],
+        ["gold_ingot", "1", "", "", "blackstone", "8–16"]]
+    ]
+}
