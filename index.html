@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Everything of Minecraft</title>
-    </head>
-    <body>
-        <h1 style="text-align: center; font-family: monocraft;">Everything <p style="font-size: 10px;">of</p> Minecraft</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything of Minecraft</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+        body {
+            background-image: url("/imgs/bg/home.png");
+        }
+        .MainScreenTitle {
+            text-align: center;
+            font-family: Monocraft, sans-serif;
+            font-size: 15vh;
+            color: white;
+        }
+        .MainScreenTitleLittleThing {
+            text-align: center;
+            font-family: Monocraft, sans-serif;
+            font-size: 40px;
+        }
+        #Minecraft {
+            font-size: 20vh;
+            margin: 0px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 0vh;
+        }
+        img {
+            padding: 0 1vh;
+            transition: transform 0.3s ease, margin 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.5);
+            margin: 0 2vh;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1 class="MainScreenTitle">Everything
+    <p class="MainScreenTitle MainScreenTitleLittleThing">of</p>
+    <p class="MainScreenTitle" id="Minecraft">Minecraft</p>
+</h1>
+<div class="container">
+    <a href="">
+        <img src="/imgs/bgimg/brewing_stand.png" alt="Brewing Stand">
+    </a>
+    <a href="">
+        <img src="/imgs/bgimg/anvil.png" alt="Anvil">
+    </a>
+    <a href="">
+        <img src="/imgs/bgimg/more.png" alt="More">
+    </a>
+    <a href="">
+        <img src="/imgs/bgimg/nether_portal.png" alt="Nether Portal">
+    </a>
+    <a href="">
+        <img src="/imgs/bgimg/map.png" alt="Map">
+    </a>
+    <a href="">
+        <img src="/imgs/bgimg/wheat_seeds.png" alt="Wheat Seeds">
+    </a>
+    <a href="">
+        <img src="/imgs/bgimg/crafting_table.png" alt="Crafting Table">
+    </a>
+    <a href="">
+        <img src="/imgs/bgimg/villager.png" alt="Villager">
+    </a>
+    <a href="">
+        <img src="/imgs/bgimg/oak_sign.png" alt="Oak Sign">
+    </a>
+    <a href="멩">
+        <img src="/imgs/bgimg/link.png" alt="Link">
+    </a>
+</div>
+</body>
 </html>
