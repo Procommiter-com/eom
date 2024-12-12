@@ -176,6 +176,10 @@
             margin: 0;
         }
 
+        canvas {
+            image-rendering: pixelated;
+        }
+
         .potion {
             display: block;
             position: relative;
@@ -209,19 +213,19 @@
         <div id="blaze" class="itemContainer">
             <img class="item" src="/imgs/item/blaze_powder.png">
         </div>
-        <img id="brewBubble" src="img/bubble.png">
-        <img id="brewArrow" src="img/arrow.png">
+        <img id="brewBubble" src="img/bubble.png" class="animatable" data-targetColor="#8b8b8b" data-dir="up">
+        <img id="brewArrow" src="img/arrow.png" class="animatable" data-targetColor="#8b8b8b" data-dir="down">
         <img id="brewPipe" src="img/brew_pipe.png">
         <img id="blazeLoader" src="img/blaze_container.png">
         <div id="potions" class="centerHorizontal">
             <div class="itemContainer Ipotion" data-value="bottle">
-                <img class="item" src="/imgs/item/potion.png">
+                <!-- <img class="item" src="/imgs/item/potion.png"> -->
             </div>
             <div class="itemContainer Ipotion" data-value="bottle">
-                <img class="item" src="/imgs/item/potion.png">
+                <!-- <img class="item" src="/imgs/item/potion.png"> -->
             </div>
             <div class="itemContainer Ipotion" data-value="bottle">
-                <img class="item" src="/imgs/item/potion.png">
+                <!-- <img class="item" src="/imgs/item/potion.png"> -->
             </div>
         </div>
         <div id="LpotionPipe">
@@ -342,6 +346,7 @@
             <p>No Effect</p>
         </div>
     </div>
+    <script src="scripts/animation.js"></script>
     <script type="module">
         fetch("./data/overlay.json").then(e => {
             e.json().then(init);
@@ -390,8 +395,10 @@
 
         let current_potion;
         let current_item;
+        let isBrewing = false;
 
         function onPotionClick(item) {
+            if(isBrewing) return;
             current_potion = item;
             document.querySelectorAll(".Ipotion").forEach(e => {
                 e.innerHTML = "";
@@ -402,6 +409,7 @@
         }
 
         function onItemClick(it) {
+            if(isBrewing) return;
             if(current_item === it) {
                 current_item = "NOTAITEM";
                 document.querySelectorAll(".Iitem").forEach(e => {
@@ -444,15 +452,31 @@
                 let d = a["brewing"][current_item];
                 current_item = null;
                 current_potion = d["id"];
-                document.querySelectorAll(".Ipotion").forEach(e => {
-                    e.innerHTML = "";
-                    e.appendChild(potion(recipe[current_potion][d["type"]].color));
-                    e.setAttribute("data-value", current_potion);
-                });
-                document.querySelectorAll(".Iitem").forEach(e => {
-                    e.innerHTML = "";
-                    e.setAttribute("data-value", "NOTAITEM");
-                });
+                isBrewing = true;
+
+                setAnimated("brewBubble", true);
+                setAnimated("brewArrow", true);
+                let b = setInterval(() => draw("brewBubble"), 20);
+                let c = setInterval(() => draw("brewArrow"), 500);
+
+                setTimeout(() => {
+                    document.querySelectorAll(".Ipotion").forEach(e => {
+                        e.innerHTML = "";
+                        e.appendChild(potion(recipe[current_potion][d["type"]].color));
+                        e.setAttribute("data-value", current_potion);
+                    });
+                    document.querySelectorAll(".Iitem").forEach(e => {
+                        e.innerHTML = "";
+                        e.setAttribute("data-value", "NOTAITEM");
+                    });
+
+                    isBrewing = false;
+                    clearInterval(b);
+                    clearInterval(c);
+
+                    clearState("brewBubble");
+                    clearState("brewArrow");
+                }, 12_100);
             }
         }
     </script>

@@ -1,6 +1,9 @@
 {
+    "water_bottle": {
+        "color": "#4400FF"
+    },
     "awkward": {
-        "color": "#385DC6",
+        "color": "#4400FF",
         "effects": [],
         "brewing": {
             "sugar": {"id":"swiftness", "type": 0}
