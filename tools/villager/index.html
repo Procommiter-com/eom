@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    
+    <style>
+        html {
+            background-image: url("/imgs/backgrand/other.png");
+            background-size: cover;
+        }
+
+        .SiteBlock {
+            display: flex;
+            gap: 100px;
+            justify-content: space-between;
+            align-items: center;
+            overflow: scroll;
+            margin: 0 auto;
+            -ms-overflow-style: none;
+        }
+
+        .SiteBlock::-webkit-scrollbar {
+            display: none;
+        }
+
+        .SiteBlock_child {
+            width: 150px;
+            height: 150px;
+        }
+
+        .head {
+            justify-content: center;
+            display: flex;
+            height: 150px;
+            padding: 50px;
+        }
+        
+        #trade_list {
+            width: 385px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto; /* X축 가운데 정렬 */
+        }
+
+
+
+        .trade_element{
+            background: url("imgs/button/button.png");
+            background-repeat:no-repeat;
+	        width: 385px;
+            
+            display: flex;
+            height: 80px;
+            /* padding: 0px 14px; */
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            align-self: stretch;
+            gap: 10px;
+        }
+        
+        
+        .trade_element img{
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+        }
+        
+        .trade_element p{
+            font-size: 36px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="head"> 
+        <img src="./imgs/head/Villager.png" alt="Villager" onclick="changeHead(this)" class="head_img">
+    </div>
+    <div class="SiteBlock"> 
+        <img class="SiteBlock_child" onclick="ShowTradeList('Barrel')" src="imgs/Site_Block/Barrel.png" alt="Barrel">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Blast_Furnace')" src="imgs/Site_Block/Blast_Furnace.png" alt="Blast Furnace">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Brewing_Stand')" src="imgs/Site_Block/Brewing_Stand.png" alt="Brewing Stand">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Cartography_Table')" src="imgs/Site_Block/Cartography_Table.png" alt="Cartography Table">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Cauldron')" src="imgs/Site_Block/Cauldron.png" alt="Cauldron">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Composter')" src="imgs/Site_Block/Composter.png" alt="Composter">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Fletching_Table')" src="imgs/Site_Block/Fletching_Table.png" alt="Fletching Table">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Grindstone')" src="imgs/Site_Block/Grindstone.png" alt="Grindstone">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Lectern')" src="imgs/Site_Block/Lectern.png" alt="Lectern">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Loom')" src="imgs/Site_Block/Loom.png" alt="Loom">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Smoker')" src="imgs/Site_Block/Smoker.png" alt="Smoker">
+        <img class="SiteBlock_child" onclick="ShowTradeList('Stonecutter')" src="imgs/Site_Block/Stonecutter.png" alt="Stonecutter">
+    </div>
+
+    <div id="trade_list"></div>
+
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
