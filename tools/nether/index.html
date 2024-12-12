@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minecraft Coordinate Converter</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/inventory.css">
+    <style>
+        *{
+            font-family: Monocraft;
+        }
+        body {
+            background-image: url('../../imgs/bg/other.png');
+            background-size: cover;
+            background-position: center center;
+        }
+        .UserInputContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .UserInput {
+            margin: 0;
+            padding: 5px;
+            background-color: rgb(88, 94, 24);
+            border: 2px solid rgba(40,40,40,0.5);
+            box-shadow: .1rem .1rem 0px .1rem #FEFEFE inset;
+            color: #FFFFFF;
+            font-family: 'Minecraft', monospace;
+        }
+
+        /* Comprehensive Button Styling */
+        button {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            padding: 0;
+            margin: 0;
+
+            /* Base button styling */
+            background: #4a4a4a url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+            border: 2px solid #000000;
+            border-radius: 5px;
+
+            /* Text styling */
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #DDD;
+            text-shadow: 2px 2px #000A;
+            font-family: 'Monocraft', sans-serif;
+
+            /* Transition effects */
+            transition: all 0.2s ease-in-out;
+
+            /* Cursor and user interaction */
+            cursor: pointer;
+            user-select: none;
+
+            /* 3D effect */
+            box-shadow:
+                    inset -2px -4px #0006,
+                    inset 2px 2px #FFF7,
+                    0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        /* Hover state */
+        button:hover {
+            background-color: #5a5a5a;
+            box-shadow:
+                    inset -2px -4px #0006,
+                    inset 2px 2px #FFF7,
+                    0 6px 8px rgba(0,0,0,0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Active/Click state */
+        button:active {
+            background-color: #3a3a3a;
+            box-shadow:
+                    inset -3px -5px #0008,
+                    inset 3px 3px #FFF9,
+                    0 2px 4px rgba(0,0,0,0.2);
+            transform: translateY(2px);
+            color: #FFFF80;
+        }
+
+        /* Disabled state */
+        button:disabled {
+            background-color: #2a2a2a;
+            color: #888;
+            cursor: not-allowed;
+            box-shadow:
+                    inset -2px -4px #0004,
+                    inset 2px 2px #FFF4;
+        }
+    </style>
+</head>
+<body>
+<<div class="invContainer">
+    <div class="OverWorldInputContainer UserInputContainer">
+        <input type="text" class="UserInput OverWorld" id="OverWorldX" placeholder="X">
+        <input type="text" class="UserInput OverWorld" id="OverWorldY" placeholder="Y">
+        <input type="text" class="UserInput OverWorld" id="OverWorldZ" placeholder="Z">
+        <button type="button" id="OverWorldSubmitButton" onclick="ConvertOverWorldToNether()">Convert</button>
+    </div>
+    <div class="NetherInputContainer UserInputContainer">
+        <input type="text" class="UserInput Nether" id="NetherX" placeholder="X">
+        <input type="text" class="UserInput Nether" id="NetherY" placeholder="Y">
+        <input type="text" class="UserInput Nether" id="NetherZ" placeholder="Z">
+        <button type="button" id="NetherSubmitButton" onclick="ConvertNetherToOverWorld()">Convert</button>
+    </div>
+</div>
+
+<script>
+    // Get input elements
+    let OverWorldX = document.getElementById('OverWorldX');
+    let OverWorldY = document.getElementById('OverWorldY');
+    let OverWorldZ = document.getElementById('OverWorldZ');
+    let NetherX = document.getElementById('NetherX');
+    let NetherY = document.getElementById('NetherY');
+    let NetherZ = document.getElementById('NetherZ');
+
+    function ConvertOverWorldToNether() {
+        NetherX.value = Math.floor(parseFloat(OverWorldX.value) / 8);
+        if(isNaN(NetherX.value)) {
+            NetherX.value = "";
+        }
+        NetherY.value = OverWorldY.value;
+        if(isNaN(NetherY.value)) {
+            NetherY.value = "";
+        }
+        NetherZ.value = Math.floor(parseFloat(OverWorldZ.value) / 8);
+        if(isNaN(NetherZ.value)) {
+            NetherZ.value = "";
+        }
+    }
+
+    function ConvertNetherToOverWorld() {
+        OverWorldX.value = Math.floor(parseFloat(NetherX.value) * 8);
+        if(isNaN(OverWorldX.value)) {
+            OverWorldX.value = "";
+        }
+        OverWorldY.value = NetherY.value;
+        if(isNaN(OverWorldY.value)) {
+            OverWorldY.value = "";
+        }
+        OverWorldZ.value = Math.floor(parseFloat(NetherZ.value) * 8);
+        if(isNaN(OverWorldZ.value)) {
+            NetherZ.value = "";
+        }
+    }
+</script>
+</body>
+</html>
