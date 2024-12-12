@@ -1,0 +1,88 @@
+.itemOverlay {
+    clip-path: polygon(0px calc(100% - 2px),
+    1px calc(100% - 2px),
+    1px calc(100% - 1px),
+    2px calc(100% - 1px),
+    2px 100%,
+    calc(100% - 2px) 100%,
+    calc(100% - 2px) calc(100% - 1px),
+    calc(100% - 1px) calc(100% - 1px),
+    calc(100% - 1px) calc(100% - 2px),
+    100% calc(100% - 2px),
+    100% 2px,
+    calc(100% - 1px) 2px,
+    calc(100% - 1px) 1px,
+    calc(100% - 2px) 1px,
+    calc(100% - 2px) 0px,
+    2px 0px,
+    2px 1px,
+    1px 1px,
+    1px 2px,
+    0px 2px);
+
+    position: relative;
+    background-color: black;
+    padding: .25% 1%;
+
+}
+
+.itemOverlay > h4 {
+    font-weight: 400;
+    color: white;
+    padding: 0;
+    margin: .4rem 0;
+    font-size: 1.1rem;
+}
+
+.itemOverlay > div * {
+    color: gray;
+    margin: .4rem 0;
+}
+
+.itemOverlay::after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0px calc(100% - 2px),
+      1px calc(100% - 2px),
+      1px calc(100% - 1px),
+      2px calc(100% - 1px),
+      2px 100%,
+      calc(100% - 2px) 100%,
+      calc(100% - 2px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 2px),
+      100% calc(100% - 2px),
+      100% 2px,
+      calc(100% - 1px) 2px,
+      calc(100% - 1px) 1px,
+      calc(100% - 2px) 1px,
+      calc(100% - 2px) 0px,
+      2px 0px,
+      2px 1px,
+      1px 1px,
+      1px 2px,
+      0px 2px,
+      0px 50%,
+      1px 50%,
+      1px 2px,
+      2px 2px,
+      2px 1px,
+      calc(100% - 2px) 1px,
+      calc(100% - 2px) 2px,
+      calc(100% - 1px) 2px,
+      calc(100% - 1px) calc(100% - 2px),
+      calc(100% - 2px) calc(100% - 2px),
+      calc(100% - 2px) calc(100% - 1px),
+      2px calc(100% - 1px),
+      2px calc(100% - 2px),
+      1px calc(100% - 2px),
+      1px 50%,
+      0px 50%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1b2d61;
+    display: block;
+    pointer-events: none;
+}
