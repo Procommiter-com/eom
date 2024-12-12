@@ -1,5 +1,5 @@
 {
-    "blast_Furnace": [
+    "Blast_Furnace": [
         [
             ["Coal", "15", "Emerald", "1", "25"],
             ["Emerald", "5", "Iron_Helmet", "12"],
@@ -22,7 +22,7 @@
         ]
     ],
     
-    "smoker": [
+    "Smoker": [
         ["Coal", "15", "Emerald", "1", "25"],
         ["Emerald", "5", "Raw_Chicken", "16"],
         ["Emerald", "5", "Raw_Rabbit", "16"],
@@ -37,7 +37,7 @@
         ["Emerald", "10", "Sweet_Berries", "12"]
     ],
 
-    "cartography_table" : [
+    "Cartography_table" : [
         ["Paper", "24", "Emerald", "16"],
         ["Emerald", "7", "Empty_Map", "12"],
         ["Glass_Pane", "11", "Emerald", "16"],
@@ -50,7 +50,7 @@
         ["Emerald", "8", "Globe_Banner_Pattern", "12"]
     ],
 
-    "brewing_stand" : [
+    "Brewing_stand" : [
         ["Rotten_Flesh", "32", "Emerald", "1"],
         ["Emerald", "2", "Redstone_Dust", "12"],
         ["Gold_Ingot", "3", "Emerald", "12"],
@@ -88,21 +88,18 @@
     ],
 
     "Barrel" : [
-        ["String", "20", "Emerald", "1", "Low", "2"],
-        ["Coal", "10", "Emerald", "1", "Low", "2"],
-        ["Emerald", "3", "Bucket_of_Cod", "16", "Low", "1"],
-        ["Raw_Cod", "6", "Cooked_Cod", "6", "Low", "1"],
-        ["Raw_Cod", "15", "Emerald", "1", "Low", "10"],
-        ["Emerald", "2", "Campfire", "12", "Low", "5"],
-        ["Raw_Salmon", "6", "Cooked_Salmon", "6", "Low", "5"],
-        ["Raw_Salmon", "13", "Emerald", "1", "Low", "20"],
-        ["Emerald", "8-22", "Enchanted_Fishing_Rod", "3", "High", "10"],
-        ["Tropical_Fish", "6", "Emerald", "1", "Low", "30"],
-        ["Pufferfish", "4", "Emerald", "1", "Low", "30"],
-        ["Boat", "1", "Emerald", "1", "Low", "30"]
+        [ 
+            ["string", "20","","", "emerald", "1"],
+            ["coal", "10","","", "emerald", "1"],
+            ["emerald", "3","","", "bucket_of_cod",""],
+            ["raw_Cod", "6","emerald","1", "cooked_cod","1"]
+        ],
+        [
+            ["raw_Cod", "15","","", "emerald","1"]
+        ]
     ],
 
-    "Fletching Table" : [
+    "Fletching_Table" : [
         ["Stick", "32", "Emerald", "1", "Low", "2"],
         ["Emerald", "16", "Arrow", "12", "Low", "1"],
         ["Gravel", "10", "Emerald", "10", "Flint", "12", "Low", "1"],
