@@ -1,50 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Document</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
 
-    <style>
-        html{
-            background-image: url(".../imgs/");
-        }
+        <script type="text/javascript" src="scripts/villager.js"></script>
 
-        .site{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            gap: 100px; 
-            overflow: scroll;
-        }
-        .site_blcok{
-            width: 150px;
-            height: 150px;
-            flex-shrink: 0;
-        }
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <style>
+            html{
+                background-image: url("imgs/backgrand/etc.png");
+                background-size: cover;
+            }
 
+            .SiteBlock{
+                display: flex;
+                gap: 100px;
+                justify-content: space-between;
+                align-items: center;
+                overflow: scroll;
+                margin: 0 auto;
+            }
 
-    </style>
+            .SiteBlock_chile{
+                width: 150;
+                height: 150px;
+            }
 
-</head>
-<body>
-    <img src="" alt="">
+            .head{
+                justify-content: center;
+                display: flex;
+            }
+        </style>
 
+    </head>
+    <body>
 
-    <div class="site">
-        <img src="./imgs/site_block/Barrel.png"            class = "site_blcok">
-        <img src="./imgs/site_block/Blast_Furnace.png"     class = "site_blcok">
-        <img src="./imgs/site_block/Brewing_Stand.png"     class = "site_blcok">
-        <img src="./imgs/site_block/Cartography_Table.png" class = "site_blcok">
-        <img src="./imgs/site_block/Cauldron.png"          class = "site_blcok">
-        <img src="./imgs/site_block/Composter.png"         class = "site_blcok">
-        <img src="./imgs/site_block/Fletching_Table.png"   class = "site_blcok">
-        <img src="./imgs/site_block/Grindstone.png"        class = "site_blcok">
-        <img src="./imgs/site_block/Lectern.png"           class = "site_blcok">
-        <img src="./imgs/site_block/Loom.png"              class = "site_blcok">
-        <img src="./imgs/site_block/Smithing_Table.png"    class = "site_blcok">
-        <img src="./imgs/site_block/Smoker.png"            class = "site_blcok">
-    </div>
-</body>
-</html>
+        <div class="head"> 
+            <img src="./imgs/mob head/Villager.png">
+        </div>
+
+        <div class="SiteBlock"> 
+            <img class="SiteBlock_child", onclick="ShowTradingList()" src="imgs/Site_Block/Barrel.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Blast_Furnace.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Brewing_Stand.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Cartography_Table.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Cauldron.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Composter.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Fletching_Table.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Grindstone.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Lectern.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Loom.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Smoker.png" >
+            <img class="SiteBlock_child", onclick="ShowtradingList()" src="imgs/Site_Block/Stonecutter.png" >
+        </div>
+
+    </body>
+    </html>
