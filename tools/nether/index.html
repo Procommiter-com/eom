@@ -41,7 +41,7 @@
             width: 100px;
             height: 50px;
             padding: 0;
-            margin: 0;
+            margin-right: 2%;
 
             /* Base button styling */
             background: #4a4a4a url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
@@ -109,6 +109,10 @@
         .header {
             margin-bottom: 10px;
         }
+        p{
+            text-align: center;
+            margin-left: 2%;
+        }
     </style>
 </head>
 <body>
@@ -118,20 +122,21 @@
     </div>
     <div class="invContainer">
         <div class="OverWorldInputContainer UserInputContainer">
-            <p>OverWorld to Nether</p>
+            <p>OverWorld to<br>Nether</p>
             <input type="text" class="UserInput OverWorld" id="OverWorldX" placeholder="X">
             <input type="text" class="UserInput OverWorld" id="OverWorldY" placeholder="Y">
             <input type="text" class="UserInput OverWorld" id="OverWorldZ" placeholder="Z">
             <button type="button" id="OverWorldSubmitButton" onclick="ConvertOverWorldToNether()">Convert</button>
         </div>
         <div class="NetherInputContainer UserInputContainer">
-            <p>Nether to OverWorld</p>
+            <p>Nether<br>to OverWorld</p>
             <input type="text" class="UserInput Nether" id="NetherX" placeholder="X">
             <input type="text" class="UserInput Nether" id="NetherY" placeholder="Y">
             <input type="text" class="UserInput Nether" id="NetherZ" placeholder="Z">
             <button type="button" id="NetherSubmitButton" onclick="ConvertNetherToOverWorld()">Convert</button>
         </div>
     </div>
+    <button id="HomeButton" onclick="Home()">Home</button>
 </div>
 <script>
     let OverWorldX = document.getElementById('OverWorldX');
