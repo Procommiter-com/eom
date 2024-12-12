@@ -16,5 +16,11 @@
     },
     "sugar": {
         "name": "Sugar"
+    },
+    "swiftness": {
+        "name": "Potion of Swiftness",
+        "effects": [
+            "Speed (3:00)"
+        ]
     }
 }

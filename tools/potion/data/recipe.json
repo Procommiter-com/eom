@@ -1,5 +1,6 @@
 {
     "awkward": {
+        "color": "#385DC6",
         "effects": [],
         "brewing": {
             "sugar": {"id":"swiftness", "type": 0}
@@ -9,6 +10,7 @@
     },
     "swiftness": [
         {
+            "color": "#FFFFFF",
             "effects": [
                 {
                     "type": "swiftness",

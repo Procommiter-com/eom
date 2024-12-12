@@ -167,7 +167,13 @@
         }
 
         body {
-            
+            background-image: url("/imgs/backgrand/other.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
         }
 
         .potion {
@@ -188,7 +194,7 @@
             height: 100%;
 
             mask-image: url('/imgs/item/potion_overlay.png');
-            mask-mode: luminance;
+            mask-mode:luminance;
             mask-repeat: no-repeat; 
             mask-size: contain;
         }
@@ -235,7 +241,7 @@
             <div class="itemContainer" data-value="water_bottle" data-type="potion">
                 <img class="item" src="img/water_bottle.png">
             </div>
-            <div class="itemContainer" data-value="awkward_potion" data-type="potion">
+            <div class="itemContainer" data-value="awkward" data-type="potion">
                 <img class="item" src="img/water_bottle.png">
             </div>
             <div class="itemContainer">
@@ -341,10 +347,10 @@
             e.json().then(init);
         });
 
-        let brew;
+        let recipe;
 
-        fetch("./data/overlay.json").then(e => {
-            e.json().then(e1 => {brew=e1});
+        fetch("./data/recipe.json").then(e => {
+            e.json().then(e1 => {recipe=e1});
         });
 
         let overlay = document.getElementById("overlay");
@@ -389,9 +395,10 @@
             current_potion = item;
             document.querySelectorAll(".Ipotion").forEach(e => {
                 e.innerHTML = "";
-                e.appendChild(potion());
+                e.appendChild(potion(recipe[item].color));
                 e.setAttribute("data-value", item);
-            })
+            });
+            brew();
         }
 
         function onItemClick(it) {
@@ -408,6 +415,7 @@
                     e.appendChild(item(`/imgs/item/${it}.png`));
                     e.setAttribute("data-value", it);
                 });
+                brew();
             }
         }
 
@@ -417,7 +425,7 @@
                 "data-type": "potion"
             });
             let d = document.createElement("div");
-            d.style.backgroundColor = 'red';
+            d.style.backgroundColor = color;
             ele.appendChild(d);
             return ele;
         }
@@ -431,7 +439,21 @@
         }
 
         function brew() {
-            brew
+            let a = recipe[current_potion];
+            if(a && a["brewing"] && a["brewing"][current_item]) {
+                let d = a["brewing"][current_item];
+                current_item = null;
+                current_potion = d["id"];
+                document.querySelectorAll(".Ipotion").forEach(e => {
+                    e.innerHTML = "";
+                    e.appendChild(potion(recipe[current_potion][d["type"]].color));
+                    e.setAttribute("data-value", current_potion);
+                });
+                document.querySelectorAll(".Iitem").forEach(e => {
+                    e.innerHTML = "";
+                    e.setAttribute("data-value", "NOTAITEM");
+                });
+            }
         }
     </script>
 </body>
