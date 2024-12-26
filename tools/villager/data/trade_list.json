@@ -131,24 +131,24 @@
     "Cauldron": [
         [
             ["leather", "6", "", "", "emerald", "2"],
-            ["emerald", "3", "", "", "leather_pants", "1"],
-            ["emerald", "7", "", "", "leather_tunic", "1"]
+            ["emerald", "3", "", "", "leather_chestplate", "1"],
+            ["emerald", "7", "", "", "leather_leggings", "1"]
         ],
         [
             ["flint", "26", "", "", "emerald", "10"],
-            ["emerald", "5", "", "", "leather_cap", "5"],
+            ["emerald", "5", "", "", "leather_helmet", "5"],
             ["emerald", "4", "", "", "leather_boots", "5"]
         ],
         [
             ["rabbit_hide", "9", "", "", "emerald", "20"],
-            ["emerald", "7", "", "", "leather_tunic", "10"]
+            ["emerald", "7", "", "", "leather_chestplate", "10"]
         ],
         [
             ["turtle_scute", "4", "", "", "emerald", "30"],
             ["emerald", "6", "", "", "leather_horse_armor", "15"]
         ],
         [
-            ["emerald", "5", "", "", "leather_cap", "30"],
+            ["emerald", "5", "", "", "leather_helmet", "30"],
             ["emerald", "6", "", "", "saddle", "30"]
         ]
     ],
@@ -170,9 +170,9 @@
             ["emerald", "5-64", "book", "", "book", "10"]
         ],
         [
-            ["book_and_quill", "1", "", "", "emerald", "30"],
-            ["emerald", "4", "", "", "compass", "15"],
-            ["emerald", "5", "", "", "clock", "15"],
+            ["writable_book", "1", "", "", "emerald", "30"],
+            ["emerald", "4", "", "", "compass_00", "15"],
+            ["emerald", "5", "", "", "clock_00", "15"],
             ["emerald", "5-64", "book", "", "book", "15"]
         ],
         [
@@ -328,29 +328,29 @@
             ["potato", "26", "", "", "emerald", "2"],
             ["carrot", "22", "", "", "emerald", "2"],
             ["beetroot", "15", "", "", "emerald", "2"],
-            ["emerald", "1", "", "", "bread_6", "1"]
+            ["emerald", "1", "", "", "bread", "6"]
         ],
         [
             ["pumpkin", "6", "", "", "emerald", "10"],
-            ["emerald", "1", "", "", "pumpkin_pie_4", "5"],
-            ["emerald", "1", "", "", "apple_4", "5"]
+            ["emerald", "1", "", "", "pumpkin_pie", "5"],
+            ["emerald", "1", "", "", "apple", "5"]
         ],
         [
             ["melon", "4", "", "", "emerald", "20"],
-            ["emerald", "3", "", "", "cookie_18", "10"]
+            ["emerald", "3", "", "", "cookie", "18"]
         ],
         [
-            ["emerald", "1", "", "", "suspicious_stew_t1", "15"],
-            ["emerald", "1", "", "", "suspicious_stew_t2", "15"],
-            ["emerald", "1", "", "", "suspicious_stew_t3", "15"],
-            ["emerald", "1", "", "", "suspicious_stew_t4", "15"],
-            ["emerald", "1", "", "", "suspicious_stew_t5", "15"],
-            ["emerald", "1", "", "", "suspicious_stew_t6", "15"],
+            ["emerald", "1", "", "", "suspicious_stew", "15"],
+            ["emerald", "1", "", "", "suspicious_stew", "15"],
+            ["emerald", "1", "", "", "suspicious_stew", "15"],
+            ["emerald", "1", "", "", "suspicious_stew", "15"],
+            ["emerald", "1", "", "", "suspicious_stew", "15"],
+            ["emerald", "1", "", "", "suspicious_stew", "15"],
             ["emerald", "1", "", "", "cake", "15"]
         ],
         [
-            ["emerald", "3", "", "", "golden_carrot_3", "30"],
-            ["emerald", "4", "", "", "glistering_melon_slice_3", "30"]
+            ["emerald", "3", "", "", "golden_carrot", "30"],
+            ["emerald", "4", "", "", "glistering_melon_slice", "30"]
         ]
     ],
 
@@ -379,7 +379,6 @@
             ["emerald", "1", "", "", "pumpkin", "1"],
             ["emerald", "1", "", "", "sugar_cane", "1"],
             ["emerald", "1", "", "", "vines", "1"],
-            ["emerald", "1", "", "", "pale_hanging_moss", "1"],
             ["emerald", "1", "", "", "lily_pad", "1"],
             ["emerald", "1", "", "", "moss_block", "1"],
             ["emerald", "1", "", "", "pale_moss_block", "1"],
@@ -420,13 +419,13 @@
     "Piglin" : [
         [["gold_ingot", "1", "", "", "book", "1"],
         ["gold_ingot", "1", "", "", "iron_boots", "8"],
-        ["gold_ingot", "1", "", "", "splash_potion_of_fire_resistance", "10"],
-        ["gold_ingot", "1", "", "", "potion_of_fire_resistance", "10"],
-        ["gold_ingot", "1", "", "", "water_bottle", "10"],
+        ["gold_ingot", "1", "", "", "splash_potion", "10"],
+        ["gold_ingot", "1", "", "", "potion", "10"],
+        ["gold_ingot", "1", "", "", "glass_bottle", "10"],
         ["gold_ingot", "1", "", "", "iron_nugget", "10–36"],
         ["gold_ingot", "1", "", "", "ender_pearl", "2–4"],
         ["gold_ingot", "1", "", "", "string", "3–9"],
-        ["gold_ingot", "1", "", "", "nether_quartz", "5–12"],
+        ["gold_ingot", "1", "", "", "quartz", "5–12"],
         ["gold_ingot", "1", "", "", "obsidian", "1"],
         ["gold_ingot", "1", "", "", "crying_obsidian", "1–3"],
         ["gold_ingot", "1", "", "", "fire_charge", "1"],
