@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/item.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/inventory.css">
+    <style>
+        #potionContainer {
+            min-width: 40rem;
+            width: 60%;
+            max-width: 50rem;
+
+            height: 25rem;
+        }
+
+        #blaze {
+            left: calc(50% - 18rem);
+            transform: translateY(-90%);
+        }
+
+        #potions {
+            display: flex;
+            bottom: 5rem;
+            width: 20rem;
+
+            justify-content: space-around;
+        }
+
+        #potions > *:nth-child(2) {
+            transform: translateY(50%);
+        }
+
+        #blazeLoader {
+            position: absolute;
+
+            height: 1.5rem;
+            bottom: 10rem;
+            left: calc(50% - 8rem);
+        }
+
+        #brewPipe {
+            position: absolute;
+
+            height: 5rem;
+            bottom: 10.3rem;
+            left: calc(50% - 14rem);
+        }
+
+        #brewBubble {
+            position: absolute;
+
+            width: 2rem;
+            left: calc(50% - 6.8rem);
+            bottom: 12.3rem;
+        }
+
+        #brewArrow {
+            position: absolute;
+
+            top: 6.2rem;
+            right: calc(50% - 5rem);
+            width: 1.5rem;
+        }
+
+        #LpotionPipe > span:nth-child(1) {
+            position: absolute;
+            display: block;
+
+            top: 9.98385rem;
+            left: calc(50% - 1.5rem);
+            width: .5rem;
+            height: 7rem;
+
+            background: #8A8A8A;
+            box-shadow: .07rem 0 0 0 #373737 inset, -.07rem 0 0 0 #FEFEFE inset;
+            filter: drop-shadow(0 .07rem 0 #FFF);
+        }
+
+        #LpotionPipe > span:nth-child(2) {
+            position: absolute;
+            display: block;
+
+            top: 16.5rem;
+            left: calc(50% - 1.5rem - 3.421rem);
+            width: 3.5rem;
+            height: .48rem;
+
+            background-color: #8A8A8A;
+            box-shadow: 0 .07rem 0 0 #373737 inset;
+            filter: drop-shadow(0 .07rem 0 #FFF);
+        }
+
+        #MpotionPipe > span {
+            position: absolute;
+            display: block;
+
+            top: 9.98385rem;
+            left: calc(50% - .25rem);
+            width: .5rem;
+            height: 8.21rem;
+
+            background: #8A8A8A;
+            box-shadow: .07rem 0 0 0 #373737 inset, -.07rem 0 0 0 #FEFEFE inset;
+        }
+
+        #RpotionPipe > span:nth-child(1) {
+            position: absolute;
+            display: block;
+
+            top: 9.98385rem;
+            right: calc(50% - 1.5rem);
+            width: .5rem;
+            height: 7rem;
+
+            background: #8A8A8A;
+            box-shadow: .07rem 0 0 0 #373737 inset, -.07rem 0 0 0 #FEFEFE inset;
+            filter: drop-shadow(0 .07rem 0 #FFF);
+        }
+
+        #RpotionPipe > span:nth-child(2) {
+            position: absolute;
+            display: block;
+
+            top: 16.5rem;
+            right: calc(50% - 1.5rem - 3.421rem);
+            width: 3.5rem;
+            height: .48rem;
+
+            background-color: #8A8A8A;
+            box-shadow: 0 .07rem 0 0 #373737 inset;
+            filter: drop-shadow(0 .07rem 0 #FFF);
+        }
+
+        #inv {
+            display: flex;
+            flex-flow: column;
+            width: fit-content;
+        }
+
+        #inv > div {
+            display: flex;
+            width: fit-content;
+        }
+
+        #overlay {
+            position: absolute !important;
+            width: fit-content;
+        }
+
+        h1 {
+            font-weight: 400;
+            color: #464646;
+
+            text-align: center;
+        }
+
+        img {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            pointer-events: none;
+
+            image-rendering: pixelated;
+        }
+
+        body {
+            background-image: url("/imgs/backgrand/other.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        canvas {
+            image-rendering: pixelated;
+        }
+
+        .potion {
+            display: block;
+            position: relative;
+            width: 80%;
+            height: 80%;
+
+            background-repeat: no-repeat; 
+            background-size: contain;
+            background-image: url('/imgs/item/potion.png');
+
+            pointer-events: none;
+        }
+
+        .potion > div {
+            width: 100%;
+            height: 100%;
+
+            mask-image: url('/imgs/item/potion_overlay.png');
+            mask-mode:luminance;
+            mask-repeat: no-repeat; 
+            mask-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div id="potionContainer" class="invContainer centerHorizontal">
+        <h1>Brewing Stand</h1>
+        <div class="itemContainer centerHorizontal Iitem">
+            <img class="item">
+        </div>
+        <div id="blaze" class="itemContainer">
+            <img class="item" src="/imgs/item/blaze_powder.png">
+        </div>
+        <img id="brewBubble" src="img/bubble.png" class="animatable" data-targetColor="#8b8b8b" data-dir="up">
+        <img id="brewArrow" src="img/arrow.png" class="animatable" data-targetColor="#8b8b8b" data-dir="down">
+        <img id="brewPipe" src="img/brew_pipe.png">
+        <img id="blazeLoader" src="img/blaze_container.png">
+        <div id="potions" class="centerHorizontal">
+            <div class="itemContainer Ipotion" data-value="bottle">
+                <!-- <img class="item" src="/imgs/item/potion.png"> -->
+            </div>
+            <div class="itemContainer Ipotion" data-value="bottle">
+                <!-- <img class="item" src="/imgs/item/potion.png"> -->
+            </div>
+            <div class="itemContainer Ipotion" data-value="bottle">
+                <!-- <img class="item" src="/imgs/item/potion.png"> -->
+            </div>
+        </div>
+        <div id="LpotionPipe">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="MpotionPipe">
+            <span></span>
+        </div>
+        <div id="RpotionPipe">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="inv" class="invContainer centerHorizontal">
+        <div>
+            <div class="itemContainer" data-value="water_bottle" data-type="potion">
+                <img class="item" src="img/water_bottle.png">
+            </div>
+            <div class="itemContainer" data-value="awkward" data-type="potion">
+                <img class="item" src="img/water_bottle.png">
+            </div>
+            <div class="itemContainer">
+                <div id="test">
+                    <div></div>
+                </div>
+            </div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+        </div>
+        <div>
+            <div class="itemContainer" data-value="sugar" data-type="item">
+                <img class="item" src="/imgs/item/sugar.png">
+            </div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+        </div>
+        <div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+        </div>
+        <div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+            <div class="itemContainer"></div>
+        </div>
+    </div>
+    <div id="overlay" class="itemOverlay" hidden>
+        <h4>Water Bottle</h4>
+        <div>
+            <p>No Effect</p>
+        </div>
+    </div>
+    <script src="scripts/animation.js"></script>
+    <script type="module">
+        fetch("./data/overlay.json").then(e => {
+            e.json().then(init);
+        });
+
+        let recipe;
+
+        fetch("./data/recipe.json").then(e => {
+            e.json().then(e1 => {recipe=e1});
+        });
+
+        let overlay = document.getElementById("overlay");
+
+        function init(json) {
+            overlay.hidden = true;
+            
+            document.addEventListener('mouseover', (e) => {
+                let ov = json[e.target.getAttribute("data-value")];
+                if(ov) {
+                    let item = e.target.getAttribute("data-value");
+                    overlay.children[0].innerHTML = ov["name"];
+                    overlay.style.top = e.clientY-e.target.offsetHeight/2+"px";
+                    overlay.style.left = e.clientX-e.layerX + 50 +"px";
+                    overlay.hidden = false;
+                }else {overlay.hidden = true;}
+            });
+
+            document.addEventListener('mousedown', (e) => {
+                let item = e.target.getAttribute("data-value");
+                if(item) {
+                    switch (e.target.getAttribute("data-type")) {
+                        case "potion":
+                            onPotionClick(item);
+                            break;
+                        
+                        case "item":
+                            onItemClick(item);
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            });
+        }
+
+        let current_potion;
+        let current_item;
+        let isBrewing = false;
+
+        function onPotionClick(item) {
+            if(isBrewing) return;
+            current_potion = item;
+            document.querySelectorAll(".Ipotion").forEach(e => {
+                e.innerHTML = "";
+                e.appendChild(potion(recipe[item].color));
+                e.setAttribute("data-value", item);
+            });
+            brew();
+        }
+
+        function onItemClick(it) {
+            if(isBrewing) return;
+            if(current_item === it) {
+                current_item = "NOTAITEM";
+                document.querySelectorAll(".Iitem").forEach(e => {
+                    e.innerHTML = "";
+                    e.setAttribute("data-value", "NOTAITEM");
+                });
+            }else {
+                current_item = it;
+                document.querySelectorAll(".Iitem").forEach(e => {
+                    e.innerHTML = "";
+                    e.appendChild(item(`/imgs/item/${it}.png`));
+                    e.setAttribute("data-value", it);
+                });
+                brew();
+            }
+        }
+
+        function potion(color, attribute) {
+            let ele = Object.assign(document.createElement("div"), {
+                className: "potion",
+                "data-type": "potion"
+            });
+            let d = document.createElement("div");
+            d.style.backgroundColor = color;
+            ele.appendChild(d);
+            return ele;
+        }
+
+        function item(src) {
+            let ele = Object.assign(document.createElement("img"), {
+                className: "item",
+                src: src
+            });
+            return ele;
+        }
+
+        function brew() {
+            let a = recipe[current_potion];
+            if(a && a["brewing"] && a["brewing"][current_item]) {
+                let d = a["brewing"][current_item];
+                current_item = null;
+                current_potion = d["id"];
+                isBrewing = true;
+
+                setAnimated("brewBubble", true);
+                setAnimated("brewArrow", true);
+                let b = setInterval(() => draw("brewBubble"), 20);
+                let c = setInterval(() => draw("brewArrow"), 500);
+
+                setTimeout(() => {
+                    document.querySelectorAll(".Ipotion").forEach(e => {
+                        e.innerHTML = "";
+                        e.appendChild(potion(recipe[current_potion][d["type"]].color));
+                        e.setAttribute("data-value", current_potion);
+                    });
+                    document.querySelectorAll(".Iitem").forEach(e => {
+                        e.innerHTML = "";
+                        e.setAttribute("data-value", "NOTAITEM");
+                    });
+
+                    isBrewing = false;
+                    clearInterval(b);
+                    clearInterval(c);
+
+                    clearState("brewBubble");
+                    clearState("brewArrow");
+                }, 12_100);
+            }
+        }
+    </script>
+</body>
+</html>

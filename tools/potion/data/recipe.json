@@ -1,0 +1,56 @@
+{
+    "water_bottle": {
+        "color": "#4400FF"
+    },
+    "awkward": {
+        "color": "#4400FF",
+        "effects": [],
+        "brewing": {
+            "sugar": {"id":"swiftness", "type": 0}
+        },
+        "durationUpgradable": false,
+        "effectUpgradable": false
+    },
+    "swiftness": [
+        {
+            "color": "#FFFFFF",
+            "effects": [
+                {
+                    "type": "swiftness",
+                    "level": 1,
+                    "duration": "3:00"
+                }
+            ],
+            "brewing": {
+                "fermented_spider_eye": {"id": "slowness", "type": 0}
+            },
+            "durationUpgradable": true,
+            "effectUpgradable": true
+        },
+        {
+            "effects": [
+                {
+                    "type": "swiftness",
+                    "level": 2,
+                    "duration": "1:30"
+                }
+            ],
+            "durationUpgradable": false,
+            "effectUpgradable": false
+        },
+        {
+            "effects": [
+                {
+                    "type": "swiftness",
+                    "level": 1,
+                    "duration": "8:00"
+                }
+            ],
+            "brewing": {
+                "fermented_spider_eye": {"id": "slowness", "type": 2}
+            },
+            "durationUpgradable": false,
+            "effectUpgradable": false
+        }
+    ]
+}

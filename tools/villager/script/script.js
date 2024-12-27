@@ -46,6 +46,7 @@ async function ShowTradeList(job) {
                 newDiv.classList.add('trade_element');
 
                 var newDiv1 = document.createElement('div');
+
                 newDiv1.style.backgroundImage = `url('/imgs/item/${jobData[i][j][0]}.png')`;
                 newDiv1.classList.add('item_container');
                 
