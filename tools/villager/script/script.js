@@ -46,59 +46,49 @@ async function ShowTradeList(job) {
                 newDiv.classList.add('trade_element');
 
                 var newDiv1 = document.createElement('div');
-                newDiv1.classList.add('item_container');
 
+                newDiv1.style.backgroundImage = `url('/imgs/item/${jobData[i][j][0]}.png')`;
+                newDiv1.classList.add('item_container');
+                
                 var newDiv2 = document.createElement('div');
+                newDiv2.style.backgroundImage = `url('/imgs/item/${jobData[i][j][2]}.png')`;
                 newDiv2.classList.add('item_container');
                 
                 var newDiv3 = document.createElement('div');
+                newDiv3.style.backgroundImage = `url('/imgs/item/${jobData[i][j][4]}.png')`;
                 newDiv3.classList.add('item_container');
     
-                // wanted - 1
-                var img1 = document.createElement('img');
-                img1.src = `/imgs/item/${jobData[i][j][0]}.png`;
-    
                 var p1 = document.createElement('p');
-                p1.textContent = jobData[i][j][1];
-    
-                // wanted - 2
-                if (jobData[i][j][2]) {
-                    var img2 = document.createElement('img');
-                    img2.src = `/imgs/item/${jobData[i][j][2]}.png`;
-    
-                    var p2 = document.createElement('p');
-                    p2.textContent = jobData[i][j][3];
-                }
-    
-                // 화살표
-                var img3 = document.createElement('img');
-                img3.src = "imgs/button/trade_arrow.png";
-    
-                // given
-                var img4 = document.createElement('img');
-                img4.src = `/imgs/item/${jobData[i][j][4]}.png`;
-    
+                p1.innerHTML = jobData[i][j][1];
+                var p2 = document.createElement('p');
+                p2.innerHTML = jobData[i][j][3];
                 var p3 = document.createElement('p');
-                p3.textContent = jobData[i][j][5];
-    
-                // 생성한 요소들을 div에 추가
-                newDiv.appendChild(img1);
-                // newDiv.appendChild(p1);
-                if (jobData[i][j][2]) {  // img2와 p2가 있을 경우에만 추가
-                    newDiv.appendChild(img2);
-                    // newDiv.appendChild(p2);
-                }
-                newDiv.appendChild(img3);
-                newDiv.appendChild(img4);
-                // newDiv.appendChild(p3);
-                
-                // newDiv.appendChild(newDiv1);
-                // newDiv.appendChild(newDiv2);
-                // newDiv.appendChild(newDiv3);
+                p3.innerHTML = jobData[i][j][5];
+               
+                // 화살표
+                var img1 = document.createElement('img');
+                img1.src = "imgs/button/trade_arrow.png";
 
-                // 부모 요소에 newDiv 추가
+
+                newDiv1.appendChild(p1)
+                newDiv2.appendChild(p2)
+                newDiv3.appendChild(p3)
+
+
+                newDiv.appendChild(newDiv1);
+                newDiv.appendChild(newDiv2);
+                newDiv.append(img1);
+                newDiv.appendChild(newDiv3);
+                
+
+    
                 document.querySelector("#trade_list").appendChild(newDiv);
             }
+
+            var Divone = document.createElement('div')
+            var ppp = document.createElement('p');
+            Divone.appendChild(ppp);
+            document.querySelector("#trade_list").appendChild(Divone);
         }
     })
     
