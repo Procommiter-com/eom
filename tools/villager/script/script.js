@@ -69,9 +69,9 @@ async function ShowTradeList(job) {
                 img1.src = "imgs/button/trade_arrow.png";
 
 
-                // newDiv1.appendChild(p1)
-                // newDiv2.appendChild(p2)
-                // newDiv3.appendChild(p3)
+                newDiv1.appendChild(p1)
+                newDiv2.appendChild(p2)
+                newDiv3.appendChild(p3)
 
 
                 newDiv.appendChild(newDiv1);
